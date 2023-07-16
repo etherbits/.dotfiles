@@ -11,7 +11,7 @@ PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
 
-source /home/etherbits/bash-commands/bash_commands.sh
+source /home/etherbits/.config/bash_commands.sh
 
 # pnpm
 export PNPM_HOME="/home/etherbits/.local/share/pnpm"

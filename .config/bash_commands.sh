@@ -33,8 +33,7 @@ function cdp(){
 
 # open commands config
 function commandConfig() {
-  cd ~/bash-commands/
-  nvim ./bash-commands.sh
+  nvim ~/.config/bash_commands.sh
 }
 
 # open # open nvim config
