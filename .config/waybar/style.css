@@ -1,0 +1,87 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Space Mono";
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(37, 43, 55, 0.0);
+    color: #111111;
+}
+
+tooltip {
+    background: #1e1e2e;
+    opacity: 0.8;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+tooltip label{
+    color: #cdd6f4;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: #506477;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color:#111111;
+}
+
+#workspaces button:hover {
+  background: transparent;
+}
+
+
+#custom-launch_wofi,
+#custom-launch_firefox,
+#custom-launch_thunderbird,
+#custom-launch_thunar,
+#custom-launch_kitty,
+#custom-lock_screen,
+#custom-light_dark,
+#custom-power_btn,
+#custom-power_profile,
+#custom-weather,
+#custom-myhyprv,
+#window,
+#cpu,
+#disk,
+#custom-updates,
+#memory,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#tray,
+#temperature,
+#workspaces,
+#idle_inhibitor,
+#backlight {
+    background: rgba(21, 18, 27, 0);
+    opacity: 1;
+    margin: 0px 8px;
+    border: 0px;
+}
+
+#custom-power_btn{
+  margin: 6px 16px;
+}
+
+#workspaces {
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#language{
+  margin-right: 16px;
+}
+
