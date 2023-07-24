@@ -4,6 +4,7 @@
 #
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
+export EDITOR="nvim"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -15,7 +16,13 @@ ZSH_THEME="robbyrussell"
 # custom commands
 cdp(){ 
   cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf)
-  tmux
+  tmux "tmuxifier w default"
+}
+
+qcp(){
+  git add .
+  git commit -m "$1"
+  git push origin main
 }
 
 bindkey -s ^p 'cdp\n'
