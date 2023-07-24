@@ -25,6 +25,10 @@ qcp(){
   git push origin main
 }
 
+ghme(){
+  xdg-open https://github.com/etherbits
+}
+
 bindkey -s ^p 'cdp\n'
 
 # Set list of themes to pick from when loading at random
