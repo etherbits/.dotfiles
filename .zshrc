@@ -12,25 +12,6 @@ export EDITOR="nvim"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-
-# custom commands
-cdp(){ 
-  cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf)
-  tmux "tmuxifier w default"
-}
-
-qcp(){
-  git add .
-  git commit -m "$1"
-  git push origin main
-}
-
-ghme(){
-  xdg-open https://github.com/etherbits
-}
-
-bindkey -s ^p 'cdp\n'
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -95,6 +76,34 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
+# custom commands
+cda(){ 
+  cd $(find ~/projects ~/.config ~/ -mindepth 1 -maxdepth 1 | fzf)
+}
+
+cdp(){ 
+  cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf)
+}
+
+cdc(){
+  cd $(find  ~/.config -mindepth 1 -maxdepth 1 | fzf)
+}
+
+cdh(){
+  cd $(find ~/ -mindepth 1 -maxdepth 1 | fzf)
+}
+
+qcp(){
+  git add .
+  git commit -m "$1"
+  git push origin main
+}
+
+ghme(){
+  xdg-open https://github.com/etherbits
+}
+
+bindkey -s ^f 'cda\n'
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
