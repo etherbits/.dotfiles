@@ -22,3 +22,5 @@ esac
 # pnpm end
 
 alias dotgit='/usr/bin/git --git-dir=/home/etherbits/.dotfiles/ --work-tree=/home/etherbits'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
