@@ -76,21 +76,27 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
+alias dotgit='/usr/bin/git --git-dir=/home/etherbits/.dotfiles/ --work-tree=/home/etherbits'
+
 # custom commands
 cda(){ 
   cd $(find ~/projects ~/.config ~/ -mindepth 1 -maxdepth 1 | fzf)
+  tmux
 }
 
 cdp(){ 
   cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf)
+  tmux | tmux3cm
 }
 
 cdc(){
   cd $(find  ~/.config -mindepth 1 -maxdepth 1 | fzf)
+  tmux
 }
 
 cdh(){
   cd $(find ~/ -mindepth 1 -maxdepth 1 | fzf)
+  tmux
 }
 
 qcp(){
@@ -101,6 +107,17 @@ qcp(){
 
 ghme(){
   xdg-open https://github.com/etherbits
+}
+
+qcpdots(){
+  dotgit add -u
+  dotgit commit -m "$1"
+  dotgit push origin main
+}
+
+tmux3cm(){
+  tmux splitw -h -p 75
+  tmux splitw -h -p 33 -d
 }
 
 bindkey -s ^f 'cda\n'
@@ -129,6 +146,5 @@ bindkey -s ^f 'cda\n'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dotgit='/usr/bin/git --git-dir=/home/etherbits/.dotfiles/ --work-tree=/home/etherbits'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
