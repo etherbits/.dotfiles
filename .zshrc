@@ -92,7 +92,7 @@ cdp(){
    cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf)
   fi
  
-  tmux | tmuxcode
+  tmux attach || (tmux | tmuxcode)
 }
 
 cdc(){
