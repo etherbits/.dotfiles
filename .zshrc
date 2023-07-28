@@ -96,7 +96,7 @@ cdp(){
 }
 
 cdn(){
-  cd $(find  ~/notes -mindepth 2 -maxdepth 2 | fzf)
+  cd $(find  ~/notes -mindepth 1 -maxdepth 1 | fzf)
   nvim .
 }
 

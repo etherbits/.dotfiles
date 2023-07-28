@@ -73,6 +73,13 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
   "nvim-treesitter/nvim-treesitter-context",
   "nvim-lua/plenary.nvim",
   {
+    "iamcco/markdown-preview.nvim",
+    config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
+  'jghauser/follow-md-links.nvim',
+  {
     "nvim-telescope/telescope.nvim", tag = "0.1.1" },
   "ThePrimeagen/harpoon"
 }
