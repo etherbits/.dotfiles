@@ -95,6 +95,11 @@ cdp(){
   tmux attach || (tmux | tmuxcode)
 }
 
+cdn(){
+  cd $(find  ~/notes -mindepth 2 -maxdepth 2 | fzf)
+  nvim .
+}
+
 cdc(){
   cd $(find  ~/.config -mindepth 1 -maxdepth 1 | fzf)
   tmux
@@ -154,3 +159,11 @@ bindkey -s ^f 'cda\n'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pnpm
+export PNPM_HOME="/home/etherbits/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
