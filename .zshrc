@@ -84,9 +84,15 @@ cda(){
   tmux
 }
 
-cdp(){ 
-  cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf)
-  tmux | tmux3cm
+cdp(){
+
+  if [ "$1" ]; then
+   cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf -q "$1" -1)
+  else
+   cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf)
+  fi
+ 
+  tmux | tmuxcode
 }
 
 cdc(){
@@ -115,9 +121,9 @@ qcpdots(){
   dotgit push origin main
 }
 
-tmux3cm(){
-  tmux splitw -h -p 75
-  tmux splitw -h -p 33 -d
+tmuxcode(){
+  tmux splitw -h -p 75 "nvim ."
+  tmux splitw -h -p 33 -d 
 }
 
 bindkey -s ^f 'cda\n'
