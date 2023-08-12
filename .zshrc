@@ -79,35 +79,14 @@ source $ZSH/oh-my-zsh.sh
 alias dotgit='/usr/bin/git --git-dir=/home/etherbits/.dotfiles/ --work-tree=/home/etherbits'
 
 # custom commands
-cda(){ 
-  cd $(find ~/projects ~/.config ~/ -mindepth 1 -maxdepth 1 | fzf)
-  tmux
-}
-
-cdp(){
-
+pf(){
   if [ "$1" ]; then
-   cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf -q "$1" -1)
+   cd $(find ~/ ~/.config ~/projects -mindepth 1 -maxdepth 1 | fzf -q "$1" -1)
   else
-   cd $(find ~/projects -mindepth 1 -maxdepth 1 | fzf)
+   cd $(find ~/ ~/.config ~/projects -mindepth 1 -maxdepth 1 | fzf)
   fi
  
   tmux attach || (tmux | tmuxcode)
-}
-
-cdn(){
-  cd $(find  ~/notes -mindepth 1 -maxdepth 1 | fzf)
-  nvim .
-}
-
-cdc(){
-  cd $(find  ~/.config -mindepth 1 -maxdepth 1 | fzf)
-  tmux
-}
-
-cdh(){
-  cd $(find ~/ -mindepth 1 -maxdepth 1 | fzf)
-  tmux
 }
 
 qcp(){
