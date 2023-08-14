@@ -1,9 +1,9 @@
 function SetColors(theme)
-	theme = theme or "github_dark"
-	vim.cmd.colorscheme(theme)
+  theme = theme or "catppuccin"
+  vim.cmd.colorscheme(theme)
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 SetColors()

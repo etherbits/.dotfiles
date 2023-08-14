@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background: rgba(21, 18, 27, 0);
+    background: rgba(20, 20, 31, .9);
     color: #f6f7fc;
 }
 
@@ -42,6 +42,7 @@ tooltip label{
     color: #cdd6f4;
     border-radius: 10px;
 }
+
 
 #custom-launch_wofi,
 #custom-launch_firefox,
@@ -100,9 +101,4 @@ tooltip label{
     border-right: 0px;
     font-size: 24px;
     margin-right: 20px;
-}
-
-#custom-launch_firefox, 
-#custom-launch_kitty {
-    font-size: 20px;
 }

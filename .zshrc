@@ -84,9 +84,7 @@ pf(){
    cd $(find ~/ ~/.config ~/projects -mindepth 1 -maxdepth 1 | fzf -q "$1" -1)
   else
    cd $(find ~/ ~/.config ~/projects -mindepth 1 -maxdepth 1 | fzf)
-  fi
- 
-  tmux attach || (tmux | tmuxcode)
+  fi 
 }
 
 qcp(){

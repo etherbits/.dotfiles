@@ -8,7 +8,7 @@ font:
 
 colors:
   primary:
-    background: "#24292E"
+    background: "#151521"
     foreground: "#d9e4e4"
 env:
   TERM: xterm-256color

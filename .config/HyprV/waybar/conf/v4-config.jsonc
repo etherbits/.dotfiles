@@ -7,40 +7,19 @@
   "gtk-layer-shell": true,
   "height": 20,
   "modules-left": ["custom/power_btn", "custom/lock_screen", "wlr/workspaces"],
-  "modules-center": ["idle_inhibitor", "clock", "custom/updates"],
+  "modules-center": ["clock"],
   "modules-right": [
     "cpu",
     "pulseaudio",
     "pulseaudio#microphone",
-    "backlight",
     "tray",
-    "temperature",
-    "custom/power_profile",
     "battery",
-    "hyprland/language",
-    "custom/myhyprv",
-    "custom/light_dark"
+    "hyprland/language"
   ],
-
-  "include": [
-    "~/.config/HyprV/waybar/conf/mesu.jsonc",
-    "~/.config/HyprV/waybar/conf/asus-rog.jsonc",
-    "~/.config/HyprV/waybar/conf/hyprv-util.jsonc"
-  ],
-
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "󰛐",
-      "deactivated": "󰛑"
-    },
-    "tooltip": true
-  },
-
   "hyprland/language": {
     "interval": 30,
-    "format": " {}",
-    "keyboard-name": "logitech-pro-gaming-keyboard",
+    "format": "{}",
+    "keyboard-name": "keychron-keychron-k6-pro",
     "on-click": "~/.config/HyprV/hyprv_util swkb",
     "signal": 8
   },
@@ -70,7 +49,7 @@
       "5": ["DP-2"],
       "6": ["DP-2"],
       "7": ["DP-2"],
-      "8": ["DP-2"],
+      "8": ["DP-2"]
     }
   },
 
@@ -80,7 +59,7 @@
     "max-length": 10,
     "format-alt-click": "click-right",
     "format-alt": " {usage}%",
-    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    "on-click": "alacritty --title=btop --command=btop"
   },
 
   "battery": {
@@ -130,27 +109,12 @@
     "tooltip": true,
     "tooltip-format": " at {volume}%"
   },
-
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon}",
-    "format-alt-click": "click-right",
-    "format-alt": "{icon} {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"],
-    "on-scroll-up": "~/.config/HyprV/waybar/scripts/brightness --inc",
-    "on-scroll-down": "~/.config/HyprV/waybar/scripts/brightness --dec"
-  },
-
   "tray": {
     "icon-size": 16,
     "spacing": 10
   },
-
-  "custom/updates": {
-    "format": "{}",
-    "exec": "~/.config/HyprV/waybar/scripts/update-sys",
-    "on-click": "~/.config/HyprV/waybar/scripts/update-sys update",
-    "interval": 300,
-    "tooltip": true
+  "clock":{
+    "format": "{:%A %d/%m/%y %H:%M:%OS}",
+    "interval": 1
   }
 }
