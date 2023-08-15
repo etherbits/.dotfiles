@@ -1,14 +1,14 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
+    font-family: "Roboto Mono";
+    font-weight: 400;
     font-size: 16px;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(20, 20, 31, .9);
+    background: rgba(20, 20, 31, .8);
     color: #f6f7fc;
 }
 
@@ -33,14 +33,10 @@ tooltip label{
 
 #workspaces button.active {
     color: #ffffff;
-    /* background: #eeeeee; */
-    border-radius: 10px;
 }
 
 #workspaces button:hover {
-    background: #11111b;
-    color: #cdd6f4;
-    border-radius: 10px;
+  background: transparent;
 }
 
 
@@ -71,13 +67,12 @@ tooltip label{
 #backlight {
     background: rgba(21, 18, 27, 0);
     opacity: 1;
-    padding: 0px 8px;
-    margin: 0px 3px;
+    margin: 0px 8px;
     border: 0px;
 }
 
-#temperature.critical {
-    color: #e92d4d;
+#custom-power_btn{
+  margin: 6px 16px;
 }
 
 #workspaces {
@@ -85,20 +80,7 @@ tooltip label{
     padding-left: 5px;
 }
 
-#window {
-    border-radius: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
+#language{
+  margin-right: 16px;
 }
 
-#custom-launch_firefox, 
-#custom-launch_thunderbird,
-#custom-launch_thunar,
-#custom-launch_wofi,
-#custom-launch_kitty,
-#custom-weather {
-    margin-left: 0px;
-    border-right: 0px;
-    font-size: 24px;
-    margin-right: 20px;
-}

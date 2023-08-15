@@ -9,7 +9,6 @@
   "modules-left": ["custom/power_btn", "custom/lock_screen", "wlr/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
-    "cpu",
     "pulseaudio",
     "pulseaudio#microphone",
     "tray",
@@ -40,7 +39,6 @@
     "disable-scroll": true,
     "all-outputs": false,
     "sort-by-coordinates": true,
-    "on-click": "activate",
     "persistent_workspaces": {
       "1": ["HDMI-A-1"],
       "2": ["HDMI-A-1"],
@@ -52,16 +50,6 @@
       "8": ["DP-2"]
     }
   },
-
-  "cpu": {
-    "interval": 10,
-    "format": "",
-    "max-length": 10,
-    "format-alt-click": "click-right",
-    "format-alt": " {usage}%",
-    "on-click": "alacritty --title=btop --command=btop"
-  },
-
   "battery": {
     "states": {
       "good": 80,

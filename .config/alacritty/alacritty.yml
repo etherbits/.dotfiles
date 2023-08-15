@@ -1,10 +1,10 @@
 window:
-  opacity: .90
+  opacity: .80
 
 font:
   normal:
     family: Roboto Mono
-    weight: 700
+    weight: 400
 
 colors:
   primary:
