@@ -69,7 +69,11 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
       })
     end
   },
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring', },
+    build = ":TSUpdate"
+  },
   "nvim-treesitter/nvim-treesitter-context",
   "nvim-lua/plenary.nvim",
   {
