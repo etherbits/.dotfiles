@@ -94,6 +94,11 @@ pf(){
   fi 
 }
 
+qc(){
+  git add .
+  git commit -m "$1"
+}
+
 qcp(){
   git add .
   git commit -m "$1"
@@ -154,3 +159,10 @@ esac
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# bun completions
+[ -s "/home/etherbits/.bun/_bun" ] && source "/home/etherbits/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -28,13 +28,16 @@ require 'treesitter-context'.setup {
 require 'nvim-treesitter.configs'.setup {
   ensure_installed = {
     'css', 'html', 'javascript',
-    'lua', 'python', 'scss', 'tsx', 
-    'typescript', 'vim', 
+    'lua', 'python', 'scss', 'tsx',
+    'typescript', 'vim', "astro"
   },
   context_commentstring = {
     enable = true,
   },
   autotag = {
     enable = true,
+  },
+  highlight = {
+    enable = true
   }
 }
