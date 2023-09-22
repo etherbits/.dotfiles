@@ -70,6 +70,10 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
     end
   },
   {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring', },
     build = ":TSUpdate"

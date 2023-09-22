@@ -115,11 +115,6 @@ qcpdots(){
   dotgit push origin main
 }
 
-tmuxcode(){
-  tmux splitw -h -p 75 "nvim ."
-  tmux splitw -h -p 33 -d 
-}
-
 bindkey -s ^f 'cda\n'
 # User configuration
 
