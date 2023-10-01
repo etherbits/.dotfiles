@@ -87,6 +87,7 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
     end,
   },
   'jghauser/follow-md-links.nvim',
+  "folke/zen-mode.nvim",
   {
     "nvim-telescope/telescope.nvim", tag = "0.1.1" },
   "ThePrimeagen/harpoon"
