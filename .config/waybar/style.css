@@ -1,57 +1,46 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Space Mono";
+    font-family: "Roboto Mono";
     font-weight: 400;
     font-size: 16px;
-    letter-spacing: 2px;
     min-height: 0;
 }
 
 window#waybar {
     background: rgba(37, 43, 55, 0.0);
-    color: #111111;
+    color: #000000;
 }
 
 tooltip {
-    background: #1e1e2e;
-    opacity: 0.8;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #11111b;
+    background: #1b1e28;
+    opacity: 0.85;
+    border-radius: 4px;
+    border: solid 1px white;
 }
 
 tooltip label{
-    color: #cdd6f4;
+    color: #e6ecff;
 }
 
 #workspaces button {
     padding: 5px;
-    color: #506477;
+    color: #888888;
     margin-right: 5px;
 }
 
 #workspaces button.active {
-    color:#111111;
+    color: #000000;
 }
 
 #workspaces button:hover {
   background: transparent;
+  color: #222222;
 }
 
 
-#custom-launch_wofi,
-#custom-launch_firefox,
-#custom-launch_thunderbird,
-#custom-launch_thunar,
-#custom-launch_kitty,
-#custom-lock_screen,
-#custom-light_dark,
 #custom-power_btn,
 #custom-power_profile,
-#custom-weather,
-#custom-myhyprv,
 #window,
 #cpu,
 #disk,
@@ -72,10 +61,6 @@ tooltip label{
     border: 0px;
 }
 
-#custom-power_btn{
-  margin: 6px 16px;
-}
-
 #workspaces {
     padding-right: 0px;
     padding-left: 5px;
@@ -83,5 +68,7 @@ tooltip label{
 
 #language{
   margin-right: 16px;
+  color: #ffffff;
+  letter-spacing: 0;
 }
 
