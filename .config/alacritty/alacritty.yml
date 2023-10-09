@@ -15,8 +15,8 @@ colors:
 
   # Cursor colors
   cursor:
-    text: CellBackground
-    cursor: CellForeground
+    text:   "0x1b1e28"
+    cursor: "0xe6ecff"
 
   # Search colors
   #
