@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = (0, 450)
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -47,6 +47,8 @@
     # for example dunstify -h int:value:12
     progress_bar = true
 
+    highlight="#42D0C5"
+
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
     progress_bar_height = 10
@@ -55,13 +57,13 @@
     progress_bar_frame_width = 1
 
     # Set the minimum width for the progress bar
-    progress_bar_min_width = 150
+    progress_bar_min_width = 120
 
     # Set the maximum width for the progress bar
     progress_bar_max_width = 300
 
     # Corner radius for the progress bar. 0 disables rounded corners.
-    progress_bar_corner_radius = 0
+    progress_bar_corner_radius = 1
 
     # Corner radius for the icon image.
     icon_corner_radius = 0
@@ -101,7 +103,7 @@
     # If value is greater than 0, separator_height will be ignored and a border
     # of size frame_width will be drawn around each notification instead.
     # Click events on gaps do not currently propagate to applications below.
-    gap_size = 0
+    gap_size = 8
 
     # Define a color for the separator.
     # possible values are:
