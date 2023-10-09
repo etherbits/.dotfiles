@@ -20,14 +20,8 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
   'windwp/nvim-ts-autotag',
   {
     'olivercederborg/poimandres.nvim',
-    config = function()
-      require('poimandres').setup {
-        -- leave this setup function empty for default config
-        -- or refer to the configuration section
-        -- for configuration options
-      }
-    end
   },
+  { "EdenEast/nightfox.nvim" },
   {
     'lewis6991/gitsigns.nvim',
     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
@@ -36,9 +30,10 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   },
+"nvim-tree/nvim-tree.lua",
   "rmehri01/onenord.nvim",
   "folke/tokyonight.nvim",
-  "ful1e5/onedark.nvim",
+  'navarasu/onedark.nvim',
   "Alexis12119/nightly.nvim",
   "rebelot/kanagawa.nvim",
   { "catppuccin/nvim",             name = "catppuccin" },
