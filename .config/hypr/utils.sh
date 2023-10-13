@@ -1,10 +1,9 @@
 #!/bin/bash
 
-setReminder(){
-  let "seconds = $1 * 60"
-  sleep $seconds; notify-send Reminder "$1 minutes have elapsed"
+screenshot(){
+  grimblast copysave area "$HOME/screenshots/$(date +%d-%m-%y_%H-%M-%S)_screenshot.png"
 }
 
-if [[ "$1" == "--remind" ]]; then
-	setReminder $2
+if [[ "$1" == "--screenshot" ]]; then
+  screenshot
 fi
