@@ -15,6 +15,8 @@ alias dotgit='/usr/bin/git --git-dir=/home/etherbits/.dotfiles/ --work-tree=/hom
 
 alias vim=nvim
 
+export EDITOR=nvim
+
 # custom commands
 pf(){
   if [ "$1" ]; then
