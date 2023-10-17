@@ -10,7 +10,9 @@ zstyle :compinstall filename '/home/etherbits/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-#
+
+source ~/.profile
+
 alias dotgit='/usr/bin/git --git-dir=/home/etherbits/.dotfiles/ --work-tree=/home/etherbits'
 
 alias vim=nvim

@@ -30,7 +30,11 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   },
-"nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-tree.lua",
+  {
+    'AckslD/muren.nvim',
+    config = true,
+  },
   "rmehri01/onenord.nvim",
   "folke/tokyonight.nvim",
   'navarasu/onedark.nvim',

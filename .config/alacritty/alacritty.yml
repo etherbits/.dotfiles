@@ -6,6 +6,7 @@ font:
   normal:
     family: Roboto Mono
     weight: 400
+    size: 32.0
 
 colors:
   # Default colors
