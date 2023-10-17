@@ -15,12 +15,12 @@ showVol(){
 }
 
 incVol(){
-  pamixer -i $1
+  pamixer --allow-boost --set-limit 200 -i $1
   showVol
 }
 
 decVol(){
-  pamixer -d $1
+  pamixer --allow-boost -d $1
   showVol
 }
 
