@@ -7,12 +7,18 @@
   "gtk-layer-shell": true,
   "height": 42,
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "modules-center": ["clock", "clock#date"],
   "modules-right": [
     "tray",
     "battery",
     "hyprland/language"
   ],
+  "clock": {
+    "format": "{:%H:%M}"
+  },
+  "clock#date": {
+    "format": "{:%a %d/%m/%y}"
+  },
   "hyprland/language": {
     "interval": 30,
     "format": "{}",
