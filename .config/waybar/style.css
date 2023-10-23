@@ -14,10 +14,10 @@ window#waybar {
 window > box {
 	  margin: 8px;
     margin-right: 0px;
-    padding: 4px 2px;
+    padding: 8px 2px;
     background: rgba(37, 43, 55, 0.8);
     color: white;
-    border-radius: 3px;
+    border-radius: 6px;
 }
 
 tooltip {
@@ -64,10 +64,11 @@ tooltip label{
 #language {
     background: rgba(21, 18, 27, 0);
     opacity: 1;
-    margin:4px 2px;
+    margin: 0 2px;
+    margin-top: 12px;
     border: 0px;
 }
 
 #clock{
-  margin:0;
+  margin: 0;
 }
