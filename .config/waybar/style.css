@@ -8,8 +8,16 @@
 }
 
 window#waybar {
-    background: rgba(37, 43, 55, 0.0);
-    color: #ffffff;
+    background: none;
+}
+
+window > box {
+	  margin: 8px;
+    margin-right: 0px;
+    padding: 4px 2px;
+    background: rgba(37, 43, 55, 0.8);
+    color: white;
+    border-radius: 3px;
 }
 
 tooltip {
@@ -24,9 +32,8 @@ tooltip label{
 }
 
 #workspaces button {
-    padding: 5px;
+    padding: 8px;
     color: #afafaf;
-    margin-right: 5px;
 }
 
 #workspaces button.active {
@@ -46,7 +53,6 @@ tooltip label{
 #disk,
 #custom-updates,
 #memory,
-#clock,
 #battery,
 #pulseaudio,
 #network,
@@ -54,21 +60,14 @@ tooltip label{
 #temperature,
 #workspaces,
 #idle_inhibitor,
-#backlight {
+#backlight,
+#language {
     background: rgba(21, 18, 27, 0);
     opacity: 1;
-    margin: 0px 8px;
+    margin:4px 2px;
     border: 0px;
 }
 
-#workspaces {
-    padding-right: 0px;
-    padding-left: 5px;
+#clock{
+  margin:0;
 }
-
-#language{
-  margin-right: 16px;
-  color: #ffffff;
-  letter-spacing: 0;
-}
-

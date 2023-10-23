@@ -1,27 +1,27 @@
  {
   "layer": "top",
-  "position": "top",
+  "position": "left",
   "mod": "dock",
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "height": 42,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock", "clock#date"],
+  "width": 48,
+  "modules-left": ["clock", "clock#date"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "tray",
     "battery",
     "hyprland/language"
   ],
-  "clock": {
-    "format": "{:%H:%M}"
+  "clock":{
+    "format": "{:%H\n%M\n──}",
   },
   "clock#date": {
-    "format": "{:%a %d/%m/%y}"
+    "format": "{:%d\n%m\n%y}"
   },
   "hyprland/language": {
     "interval": 30,
-    "format": "{}",
+    "format": "{short}",
     "keyboard-name": "keychron-keychron-k6-pro",
     "on-click": "~/.config/HyprV/hyprv_util swkb",
     "signal": 8
