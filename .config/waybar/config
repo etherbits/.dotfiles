@@ -5,19 +5,31 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
+  "fixed-center": true,
   "width": 48,
   "modules-left": ["clock", "clock#date"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
+    "custom/timer",
+    "custom/timer-icon",
     "tray",
     "battery",
     "hyprland/language"
   ],
   "clock":{
-    "format": "{:%H\n%M\n──}",
+    "format": "{:%H\n%M\n%S\n──}",
+    "interval": 1
   },
   "clock#date": {
     "format": "{:%d\n%m\n%y}"
+  },
+  "custom/timer": {
+    "exec": "$HOME/.config/waybar/scripts/timer 15:00 --json | jq --unbuffered --compact-output",
+    "return-type": "json",
+    "format": "{}\n──",
+  },
+  "custom/timer-icon": {
+    "format": ""
   },
   "hyprland/language": {
     "interval": 30,
@@ -26,13 +38,15 @@
     "on-click": "~/.config/HyprV/hyprv_util swkb",
     "signal": 8
   },
-
   "custom/power_btn": {
     "format": "",
     "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
     "tooltip": false
   },
-
+  "tray": {
+    "icon-size": 16,
+    "interval": 1,
+  },
   "custom/lock_screen": {
     "format": "",
     "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
