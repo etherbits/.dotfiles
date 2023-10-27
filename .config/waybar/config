@@ -24,9 +24,10 @@
     "format": "{:%d\n%m\n%y}"
   },
   "custom/timer": {
-    "exec": "$HOME/.config/waybar/scripts/timer 15:00 --json | jq --unbuffered --compact-output",
+    "exec": "cat $HOME/.config/waybar/status/timer | jq --unbuffered --compact-output",
     "return-type": "json",
     "format": "{}\n──",
+    "interval": 1,
   },
   "custom/timer-icon": {
     "format": ""
