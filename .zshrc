@@ -19,6 +19,8 @@ alias vim=nvim
 
 export EDITOR=nvim
 
+export PATH="$HOME/timer:$PATH"
+
 # custom commands
 pf(){
   if [ "$1" ]; then
