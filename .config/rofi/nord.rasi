@@ -17,7 +17,7 @@
 	nord5: #e5e9f0;
 	nord6: #eceff4;
 
-	nord7: rgba(137, 221, 255, 0.8);
+	nord7: rgba(81, 90, 120, 0.6);
 	nord8: #88c0d0;
 	nord9: #81a1c1;
 	nord10: #5e81ac;
@@ -84,7 +84,7 @@ prompt {
 
 listview {
     border-color: @nord10;
-    background-color: transparent;
+    background-color: rgba(0,0,0,0);
     dynamic: false;
 }
 
@@ -100,7 +100,6 @@ element {
 
 element selected.normal {
 	background-color: @nord7;
-	text-color: #2e3440;
 }
 
 element-text, element-icon {
