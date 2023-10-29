@@ -17,7 +17,7 @@
 	nord5: #e5e9f0;
 	nord6: #eceff4;
 
-	nord7: #8fbcbb;
+	nord7: rgba(137, 221, 255, 0.8);
 	nord8: #88c0d0;
 	nord9: #81a1c1;
 	nord10: #5e81ac;
@@ -52,13 +52,13 @@ window {
 }
 
 mainbox {
-    spacing: 0;
+    spacing: 12px;
     children: [ inputbar, message, listview ];
 }
 
 message {
     color: @nord0;
-    padding: 5;
+    padding: 5px;
     border-color: @foreground;
     border:  0px 2px 2px 2px;
     background-color: @nord7;
@@ -66,11 +66,10 @@ message {
 
 inputbar {
     color: @nord6;
-    padding: 11px;
-    background-color: #3b4252;
+    padding: 12px 16px;
+    background-color: rgba(27, 30, 40, 0.6);
 
-    border: 1px;
-    border-radius:  6px 6px 0px 0px;
+    border-radius: 8px;
     border-color: @nord10;
 }
 
@@ -80,23 +79,21 @@ entry, prompt, case-indicator {
 }
 
 prompt {
-    margin: 0px 1em 0em 0em ;
+    margin: 0 8px;
 }
 
 listview {
-    padding: 8px;
-    border-radius: 0px 0px 6px 6px;
     border-color: @nord10;
-    border: 0px 1px 1px 1px;
-    background-color: rgba(46,52,64,0.9);
+    background-color: transparent;
     dynamic: false;
 }
 
 element {
-    padding: 3px;
+    padding: 12px 16px;
+    margin: 4px 0;
     vertical-align: 0.5;
-    border-radius: 4px;
-    background-color: transparent;
+    border-radius: 8px;
+    background-color: rgba(27, 30, 40, 0.6);
     color: @foreground;
     text-color: rgb(216, 222, 233);
 }
@@ -107,8 +104,9 @@ element selected.normal {
 }
 
 element-text, element-icon {
-    background-color: inherit;
+    background-color: transparent;
     text-color:       inherit;
+    margin: 0 8px;
 }
 
 button {
