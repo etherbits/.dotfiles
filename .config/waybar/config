@@ -24,7 +24,7 @@
     "format": "{:%d\n%m\n%y}"
   },
   "custom/timer": {
-    "exec": "cat $HOME/.config/waybar/status/timer | jq --unbuffered --compact-output",
+    "exec": "cat $HOME/status/timer | jq --unbuffered --compact-output",
     "return-type": "json",
     "format": "{}\n──",
     "interval": 1,
