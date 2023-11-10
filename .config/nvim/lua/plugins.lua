@@ -21,6 +21,7 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
   {
     'olivercederborg/poimandres.nvim',
   },
+  'github/copilot.vim',
   { "EdenEast/nightfox.nvim" },
   {
     'lewis6991/gitsigns.nvim',
