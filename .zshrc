@@ -55,6 +55,32 @@ i(){
 	sudo pacman -S "$1"
 }
 
+unzipd(){
+  if [[ $# != 1 ]]; then echo I need a single argument, the name of the archive to extract; return 1; fi
+  target="${1%.zip}"
+  unzip "$1" -d "${target##*/}"
+}
+
+unzipad(){
+  for zip in *.zip
+  do
+    dirname=`echo $zip | sed 's/\.zip$//'`
+    if mkdir "$dirname"
+    then
+      if cd "$dirname"
+      then
+        unzip ../"$zip"
+        cd ..
+        # rm -f $zip # Uncomment to delete the original zip file
+      else
+        echo "Could not unpack $zip - cd failed"
+      fi
+    else
+      echo "Could not unpack $zip - mkdir failed"
+    fi
+  done
+}
+
 eval "$(starship init zsh)"
 
 
@@ -79,3 +105,6 @@ esac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2023-11-13 16:46:52
+export PATH="$PATH:/home/etherbits/.local/bin"

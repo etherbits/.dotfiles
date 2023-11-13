@@ -46,6 +46,7 @@
   },
   "tray": {
     "icon-size": 16,
+    "spacing": 6,
     "interval": 1,
   },
   "custom/lock_screen": {
