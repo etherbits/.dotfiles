@@ -81,6 +81,14 @@ unzipad(){
   done
 }
 
+ocrmanga(){
+  mkdir og && mv *.* og && mokuro -d True og
+}
+
+cdmedia(){
+  cd /mnt/store/media
+}
+
 eval "$(starship init zsh)"
 
 
