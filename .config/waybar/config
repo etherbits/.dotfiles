@@ -1,7 +1,7 @@
  {
   "layer": "top",
   "position": "left",
-  "mod": "dock",
+  "mode": "dock",
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
