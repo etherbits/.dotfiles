@@ -3,10 +3,10 @@ window:
   opacity: 0.8
 
 font:
+  size: 12.0
   normal:
     family: Roboto Mono
     weight: 400
-    size: 32.0
 
 colors:
   # Default colors

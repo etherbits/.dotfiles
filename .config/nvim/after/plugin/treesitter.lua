@@ -11,18 +11,6 @@ require 'treesitter-context'.setup {
   separator = nil,
   zindex = 20,     -- The Z-index of the context window
   on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
-  context_commentstring = {
-    config = {
-      javascript = {
-        __default = '// %s',
-        jsx_element = '{/* %s */}',
-        jsx_fragment = '{/* %s */}',
-        jsx_attribute = '// %s',
-        comment = '// %s',
-      },
-      typescript = { __default = '// %s', __multiline = '/* %s */' },
-    },
-  }
 }
 
 require 'nvim-treesitter.configs'.setup {
@@ -30,9 +18,6 @@ require 'nvim-treesitter.configs'.setup {
     'css', 'html', 'javascript',
     'lua', 'python', 'scss', 'tsx',
     'typescript', 'vim', "astro"
-  },
-  context_commentstring = {
-    enable = true,
   },
   autotag = {
     enable = true,
@@ -43,6 +28,9 @@ require 'nvim-treesitter.configs'.setup {
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+
+
+
 parser_config.blade = {
   install_info = {
     url = "https://github.com/EmranMR/tree-sitter-blade",

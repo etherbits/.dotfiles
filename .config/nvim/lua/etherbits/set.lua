@@ -25,3 +25,4 @@ vim.opt.list = false
 
 vim.g.mapleader = " "
 
+vim.g.lsp_zero_extend_lspconfig = 0

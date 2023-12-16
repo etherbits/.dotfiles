@@ -1,18 +1,11 @@
-return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
+return {
+  'nvim-lua/popup.nvim',
   'numToStr/Navigator.nvim',
   {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   },
   "lukas-reineke/indent-blankline.nvim",
-  {
-    'AlexvZyl/nordic.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require 'nordic'.load()
-    end
-  },
   {
     'filipdutescu/renamer.nvim',
     branch = 'master'
@@ -22,7 +15,6 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
     'olivercederborg/poimandres.nvim',
   },
   'github/copilot.vim',
-  { "EdenEast/nightfox.nvim" },
   {
     'lewis6991/gitsigns.nvim',
     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
@@ -41,28 +33,21 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},
   },
-  "rmehri01/onenord.nvim",
-  "folke/tokyonight.nvim",
-  'navarasu/onedark.nvim',
-  "Alexis12119/nightly.nvim",
-  "rebelot/kanagawa.nvim",
-  { "catppuccin/nvim",             name = "catppuccin" },
-  { 'projekt0n/github-nvim-theme', version = 'v0.0.7' },
-  'nyoom-engineering/oxocarbon.nvim',
-  { "CRAG666/code_runner.nvim", config = true },
-  "ggandor/leap.nvim", "numToStr/Comment.nvim", "Pocco81/auto-save.nvim", "jiangmiao/auto-pairs",
+  "ggandor/leap.nvim",
+  "numToStr/Comment.nvim",
+  "Pocco81/auto-save.nvim",
+  "jiangmiao/auto-pairs",
   "MunifTanjim/prettier.nvim",
-  "jose-elias-alvarez/null-ls.nvim",
   "rafamadriz/friendly-snippets",
-  "VonHeikemen/lsp-zero.nvim",
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
-  'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer'
-, 'hrsh7th/cmp-path'
-, 'hrsh7th/cmp-cmdline'
-, 'hrsh7th/nvim-cmp',
-  { 'L3MON4D3/LuaSnip',         dependencies = { "rafamadriz/friendly-snippets" } },
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-cmdline',
+  'hrsh7th/nvim-cmp',
+  { 'L3MON4D3/LuaSnip', dependencies = { "rafamadriz/friendly-snippets" } },
   'saadparwaiz1/cmp_luasnip',
   {
     "kylechui/nvim-surround",
@@ -85,15 +70,35 @@ return { 'nvim-lua/popup.nvim', 'sudormrfbin/cheatsheet.nvim',
   },
   "nvim-treesitter/nvim-treesitter-context",
   "nvim-lua/plenary.nvim",
-  {
-    "iamcco/markdown-preview.nvim",
-    config = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-  },
-  'jghauser/follow-md-links.nvim',
   "folke/zen-mode.nvim",
+  "nvim-telescope/telescope.nvim",
+  "ThePrimeagen/harpoon",
   {
-    "nvim-telescope/telescope.nvim", tag = "0.1.1" },
-  "ThePrimeagen/harpoon"
+    "m4xshen/smartcolumn.nvim",
+    opts = {}
+  },
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  "sindrets/diffview.nvim",
+  "folke/todo-comments.nvim",
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    }
+  },
+  'norcalli/nvim-colorizer.lua'
 }
