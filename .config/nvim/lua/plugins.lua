@@ -37,7 +37,6 @@ return {
   "numToStr/Comment.nvim",
   "Pocco81/auto-save.nvim",
   "jiangmiao/auto-pairs",
-  "MunifTanjim/prettier.nvim",
   "rafamadriz/friendly-snippets",
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
