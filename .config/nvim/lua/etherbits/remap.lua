@@ -10,7 +10,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- formating
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-vim.keymap.set("n", "<leader>F", "<CMD>w<CR><CMD>!prettier --write %<CR>", { desc = "Format with prettier" })
 
 -- system clipboard
 vim.keymap.set("x", "<leader>P", [["_dP]])
