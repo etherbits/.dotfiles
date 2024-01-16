@@ -24,8 +24,48 @@ return {
   "nvim-telescope/telescope-ui-select.nvim",
   { "mfussenegger/nvim-dap",           dependencies = { "rcarriga/nvim-dap-ui" } },
   { "folke/neodev.nvim" },
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+  },
   "numToStr/Navigator.nvim",
+  "sindrets/diffview.nvim",
   "github/copilot.vim",
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({})
+    end,
+  },
+  {
+    "m4xshen/smartcolumn.nvim",
+    opts = {},
+  },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {},
+  },
+
+  {
+    "numToStr/Comment.nvim",
+    opts = {},
+    lazy = false,
+  },
+  {
+    "smjonas/inc-rename.nvim",
+    config = function()
+      require("inc_rename").setup()
+    end,
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+  },
   {
     "olivercederborg/poimandres.nvim",
     lazy = false,

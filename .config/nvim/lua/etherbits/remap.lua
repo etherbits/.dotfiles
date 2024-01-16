@@ -24,3 +24,6 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- copilot
 vim.g.copilot_assume_mapped = true
 vim.api.nvim_set_keymap("i", "<C-f>", "copilot#Accept()", { expr = true, silent = true })
+
+-- rename
+vim.keymap.set("n", "<F2>", ":IncRename ")
