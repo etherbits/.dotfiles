@@ -8,7 +8,6 @@ telescope.setup({
   }
 })
 
-telescope.load_extension("themes")
 telescope.load_extension("ui-select")
 
 local builtin = require("telescope.builtin")

@@ -21,8 +21,11 @@ return {
     tag = "0.1.5",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-  "andrew-george/telescope-themes",
   "nvim-telescope/telescope-ui-select.nvim",
+  { "mfussenegger/nvim-dap",           dependencies = { "rcarriga/nvim-dap-ui" } },
+  { "folke/neodev.nvim" },
+  "numToStr/Navigator.nvim",
+  "github/copilot.vim",
   {
     "olivercederborg/poimandres.nvim",
     lazy = false,
