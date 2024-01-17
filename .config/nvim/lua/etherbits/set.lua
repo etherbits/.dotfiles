@@ -28,3 +28,6 @@ vim.g.mapleader = " "
 vim.diagnostic.config({
   severity_sort = true,
 })
+
+-- copilot
+vim.g.copilot_assume_mapped = true
