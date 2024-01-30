@@ -81,3 +81,10 @@ colors:
     magenta: "0xfae4fc"
     cyan: "0x89ddff"
     white: "0xffffff"
+  command:
+      args:
+      - -a
+      - firefox
+      program: /usr/bin/open
+    key: Return
+    mods: Command
