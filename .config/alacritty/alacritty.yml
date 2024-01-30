@@ -1,6 +1,9 @@
 # Colors (Poimandres Storm)
 window:
   opacity: 0.8
+  padding:
+    x: 32
+    y: 32
 
 font:
   size: 12.0

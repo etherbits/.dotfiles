@@ -1,4 +1,6 @@
 # Lines configured by zsh-newuser-install
+. "$HOME/.asdf/asdf.sh"
+
 HISTFILE=~/.histfile
 HISTSIZE=200
 SAVEHIST=200
@@ -21,14 +23,32 @@ export EDITOR=nvim
 
 export PATH="$HOME/timer:$PATH"
 
+
 # custom commands
 pf(){
-  if [ "$1" ]; then
-   cd $(find ~/ ~/.config ~/projects -mindepth 1 -maxdepth 1 | fzf -q "$1" -1)
+  if [[ $# -eq 1 ]]; then
+      selected=$1
   else
-   cd $(find ~/ ~/.config ~/projects -mindepth 1 -maxdepth 1 | fzf)
-  fi 
+      selected=$(find  ~/projects ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
+  fi
+
+  if [[ -z $selected ]]; then
+      exit 0
+  fi
+
+  selected_name=$(basename "$selected" | tr . _)
+
+  if ! tmux has-session -t=$selected_name 2> /dev/null; then
+    tmux new-session -s $selected_name -c $selected
+  else
+    tmux attach-session -t $selected_name
+  fi
+
 }
+
+zle -N project-find pf
+
+bindkey ^f project-find
 
 qc(){
   git add .
@@ -110,9 +130,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Created by `pipx` on 2023-11-13 16:46:52
 export PATH="$PATH:/home/etherbits/.local/bin"
