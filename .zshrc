@@ -49,10 +49,6 @@ pf(){
 
 }
 
-zle -N project-find pf
-
-bindkey ^f project-find
-
 qc(){
   git add .
   git commit -m "$1"

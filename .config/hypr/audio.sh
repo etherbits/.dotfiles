@@ -14,6 +14,15 @@ showVol(){
   fi
 }
 
+showMic(){
+  if [[ "$(pamixer --default-source --get-mute)" = "true" ]] then 
+    notify-send -t 500 -h string:x-canonical-private-synchronous:sys-notify "🎤 ❌"
+
+  else
+    notify-send -t 500 -h string:x-canonical-private-synchronous:sys-notify "🎤 ✔️"
+  fi
+}
+
 incVol(){
   pamixer --allow-boost --set-limit 200 -i $1
   showVol
@@ -24,9 +33,14 @@ decVol(){
   showVol
 }
 
-toggleMute(){
+toggleAudioMute(){
   pamixer --toggle-mute
   showVol
+}
+
+toggleMicMute(){
+  pamixer --default-source --toggle-mute
+  showMic
 }
 
 if [[ "$1" == "--get" ]]; then
@@ -35,8 +49,10 @@ elif [[ "$1" == "--inc" ]]; then
 	incVol $2
 elif [[ "$1" == "--dec" ]]; then
 	decVol $2
-elif [[ "$1" == "--toggle-mute" ]]; then
-	toggleMute
+elif [[ "$1" == "--toggle-audio-mute" ]]; then
+	toggleAudioMute
+elif [[ "$1" == "--toggle-mic-mute" ]]; then
+	toggleMicMute
 else
 	showVol
 fi
