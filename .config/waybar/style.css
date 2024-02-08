@@ -42,15 +42,10 @@ window > box {
 }
 
 #workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;
-    background-image: linear-gradient(0deg, @selection, @background-darker);
+  color: rgba(200,216,255, 0.85);
+  background: none;
 }
 
 #workspaces button.urgent {
-    background-image: linear-gradient(0deg, @red, @background-darker);
+  color: rgba(255,170,140, 1);
 }
-#taskbar button.active {
-    background-image: linear-gradient(0deg, @selection, @background-darker);
-}
-

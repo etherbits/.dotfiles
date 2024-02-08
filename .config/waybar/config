@@ -37,8 +37,6 @@
     "sort-by-coordinates": true,
     "format": "{icon}",
     "format-icons": {
-      "urgent": "!",
-      "active": "●",
       "default": "●"
     },
     
