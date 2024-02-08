@@ -23,6 +23,8 @@ showMic(){
   else
     notify-send -t 500 -h string:x-canonical-private-synchronous:sys-notify "🎤 ✔️"
   fi
+
+  pkill -SIGRTMIN+8 waybar # Update waybar
 }
 
 incVol(){
