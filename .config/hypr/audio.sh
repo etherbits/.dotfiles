@@ -12,6 +12,8 @@ showVol(){
     notify-send -t 500 -h int:value:"$(getVol)" -h string:x-canonical-private-synchronous:sys-notify "🔊   $(getVol)%"
 
   fi
+
+  pkill -SIGRTMIN+8 waybar # Update waybar
 }
 
 showMic(){

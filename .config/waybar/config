@@ -14,8 +14,11 @@
     "hyprland/workspaces",
   ],
   "modules-right": [
+    "custom/audio_volume_icon",
+    "custom/audio_volume",
+    "custom/mic_icon",
     "tray",
-    "hyprland/language",
+    "hyprland/language", 
   ],
   "custom/clock_icon": {
     "format": ""
@@ -49,6 +52,21 @@
       "7": [],
       "8": [],
     },
+  },
+  "custom/audio_volume_icon": {
+    "format": ""
+  },
+  "custom/audio_volume": {
+    "exec": "zsh ~/.config/waybar/utils.sh --get-vol",
+    "format": "{}",
+    "interval": "once", // this is needed for sig
+    "signal": 8         
+  },
+  "custom/mic_icon": { 
+    "exec": "zsh ~/.config/waybar/utils.sh --get-mic-icon",
+    "format": "{}",
+    "interval": "once", 
+    "signal": 8         
   },
   "tray": {
     "spacing": 4
