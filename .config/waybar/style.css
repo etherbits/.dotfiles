@@ -24,10 +24,14 @@ window > box {
 #custom-clock_icon,
 #custom-audio_volume_icon,
 #custom-mic_icon,
-#workspaces button.active {
-  color: rgba(200,216,255, 1);
+#custom-language_icon,
+#custom-power_button {
+  color: rgba(200,216,255, 0.9);
 }
 
+#custom-tray_separator{
+  color: rgba(200,216,255, 0.6);
+}
 
 /* spacing */
 #custom-calendar_icon,
@@ -35,14 +39,30 @@ window > box {
   margin-top: 16px;
 }
 
+#language{
+  margin-top: -4px;
+}
 
-#custom-mic_icon{
+#custom-tray_separator{
   margin-top: 8px;
 }
 
-#clock {
-    padding-top: 4px;
+#custom-mic_icon{
+  margin-top: 16px;
 }
+
+#custom-audio_volume_icon {
+  margin-top: 10px;
+}
+
+#custom-language_icon {
+  margin-top: 10px;
+}
+
+#custom-power_button{
+  margin-top: 16px;
+}
+
 
 #workspaces button {
   color: rgba(200,216,255, 0.4);
@@ -53,6 +73,6 @@ window > box {
   background: none;
 }
 
-#workspaces button.urgent {
-  color: rgba(255,170,140, 1);
+#workspaces button.active {
+  color: rgba(200,216,255, 11);
 }

@@ -14,11 +14,13 @@
     "hyprland/workspaces",
   ],
   "modules-right": [
-    "custom/audio_volume_icon",
-    "custom/audio_volume",
-    "custom/mic_icon",
     "tray",
+    "custom/tray_separator",
+    "custom/mic_icon",
+    "custom/audio_volume_icon",
+    "custom/language_icon",
     "hyprland/language", 
+    "custom/power_button"
   ],
   "custom/clock_icon": {
     "format": ""
@@ -53,11 +55,14 @@
       "8": [],
     },
   },
-  "custom/audio_volume_icon": {
-    "format": ""
+  "tray": {
+    "spacing": 4
   },
-  "custom/audio_volume": {
-    "exec": "zsh ~/.config/waybar/utils.sh --get-vol",
+  "custom/tray_separator": {
+    "format": ""
+  },
+  "custom/audio_volume_icon": {
+    "exec": "zsh ~/.config/waybar/utils.sh --get-vol-icon",
     "format": "{}",
     "interval": "once", // this is needed for sig
     "signal": 8         
@@ -68,14 +73,17 @@
     "interval": "once", 
     "signal": 8         
   },
-  "tray": {
-    "spacing": 4
+  "custom/language_icon": {
+    "format": ""
   },
   "hyprland/language": {
     "interval": 30,
     "format": "{short}",
     "keyboard-name": "keychron-keychron-k6-pro",
-    "on-click": "~/.config/HyprV/hyprv_util swkb",
     "signal": 8
   },
+  "custom/power_button":{
+    "format":"",
+    "on-click": "zsh ~/.config/waybar/utils.sh --power-menu"
+  }
 }
