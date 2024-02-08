@@ -24,7 +24,7 @@ showMic(){
 }
 
 incVol(){
-  pamixer --allow-boost --set-limit 200 -i $1
+  pamixer --allow-boost --set-limit 100 -i $1
   showVol
 }
 
