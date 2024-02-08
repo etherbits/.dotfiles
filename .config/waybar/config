@@ -1,36 +1,60 @@
- {
+{
   "layer": "top",
   "position": "left",
   "mode": "dock",
-  "exclusive": true,
-  "passthrough": false,
-  "gtk-layer-shell": true,
-  "fixed-center": true,
-  "width": 48,
-  "modules-left": ["clock", "clock#date"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": [
-    "custom/timer",
-    "custom/timer-icon",
-    "tray",
-    "battery",
-    "hyprland/language"
+  "width": 56,
+  "spacing": 4,
+  "output": ["HDMI-A-2"],
+  "modules-left": [
+    "custom/clock_icon",
+    "clock",
+    "custom/calendar_icon",
+    "clock#date",
   ],
-  "clock":{
-    "format": "{:%H\n%M\n%S\n──}",
+  "modules-center": [
+    "hyprland/workspaces",
+  ],
+  "modules-right": [
+    "tray",
+    "hyprland/language",
+  ],
+  "custom/clock_icon": {
+    "format": ""
+  },
+ "clock":{
+    "format": "{:%H\n%M\n%S}",
     "interval": 1
+  },
+  "custom/calendar_icon": {
+    "format": "",
   },
   "clock#date": {
     "format": "{:%d\n%m\n%y}"
   },
-  "custom/timer": {
-    "exec": "cat $HOME/status/timer | jq --unbuffered --compact-output",
-    "return-type": "json",
-    "format": "{}\n──",
-    "interval": 1,
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "sort-by-coordinates": true,
+    "format": "{icon}",
+    "format-icons": {
+      "urgent": "!",
+      "active": "●",
+      "default": "●"
+    },
+    
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+    },
   },
-  "custom/timer-icon": {
-    "format": ""
+  "tray": {
+    "spacing": 4
   },
   "hyprland/language": {
     "interval": 30,
@@ -39,48 +63,4 @@
     "on-click": "~/.config/HyprV/hyprv_util swkb",
     "signal": 8
   },
-  "custom/power_btn": {
-    "format": "",
-    "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
-    "tooltip": false
-  },
-  "tray": {
-    "icon-size": 16,
-    "spacing": 6,
-    "interval": 1,
-  },
-  "custom/lock_screen": {
-    "format": "",
-    "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
-    "tooltip": false
-  },
-
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": false,
-    "sort-by-coordinates": true,
-    "persistent_workspaces": {
-      "1": ["HDMI-A-2"],
-      "2": ["HDMI-A-2"],
-      "3": ["HDMI-A-2"],
-      "4": ["HDMI-A-2"],
-      "5": ["DP-2"],
-      "6": ["DP-2"],
-      "7": ["DP-2"],
-      "8": ["DP-2"]
-    }
-  },
-  "battery": {
-    "states": {
-      "good": 80,
-      "warning": 30,
-      "critical": 20
-    },
-    "format": "{icon}",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt-click": "click-right",
-    "format-alt": "{icon} {capacity}%",
-    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-  }
- }
+}

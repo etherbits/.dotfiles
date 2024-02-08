@@ -2,8 +2,8 @@
 . "$HOME/.asdf/asdf.sh"
 
 HISTFILE=~/.histfile
-HISTSIZE=200
-SAVEHIST=200
+HISTSIZE=10000
+SAVEHIST=10000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -13,11 +13,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-source ~/.profile
-
-alias dotgit='/usr/bin/git --git-dir=/home/etherbits/.dotfiles/ --work-tree=/home/etherbits'
+alias dotgit='/usr/bin/git --git-dir=/home/etherbits/.cfg/ --work-tree=/home/etherbits'
 
 alias vim=nvim
+
+alias paru="paru --limit 5"
 
 export EDITOR=nvim
 
