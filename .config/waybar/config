@@ -9,6 +9,7 @@
     "clock",
     "custom/calendar_icon",
     "clock#date",
+    "custom/week_day"
   ],
   "modules-center": [
     "hyprland/workspaces",
@@ -34,6 +35,11 @@
   },
   "clock#date": {
     "format": "{:%d\n%m\n%y}"
+
+  },
+  "custom/week_day": {
+    "exec": "date '+%a'",
+    "format": "{}"
   },
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -56,7 +62,7 @@
     },
   },
   "tray": {
-    "spacing": 4
+    "spacing": 8
   },
   "custom/tray_separator": {
     "format": ""

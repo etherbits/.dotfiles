@@ -19,6 +19,11 @@ window > box {
     border-radius: 6px;
 }
 
+#custom-week_day{
+  font-size: 12pt;
+  font-family: Roboto Mono;
+}
+
 /* icon colors */
 #custom-calendar_icon,
 #custom-clock_icon,
