@@ -1,17 +1,23 @@
 * {
   all: unset;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Roboto Mono";
   transition: 200ms;
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #363a4f;
+  /* box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #363a4f; */
   border-radius: 12.6px;
   margin: 18px;
-  background-color: #24273a;
+  background-color: rgba(36,39,58, 0.4);
   color: #cad3f5;
   padding: 0;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
+  /* Notification summary/title */
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .image {
