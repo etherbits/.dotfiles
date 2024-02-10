@@ -29,6 +29,7 @@ window > box {
 #custom-clock_icon,
 #custom-audio_volume_icon,
 #custom-mic_icon,
+#custom-notification_icon,
 #custom-language_icon,
 #custom-power_button {
   color: rgba(200,216,255, 0.9);
@@ -53,12 +54,17 @@ window > box {
 }
 
 #custom-mic_icon{
-  margin-top: 16px;
+  margin-top: 10;
 }
 
 #custom-audio_volume_icon {
   margin-top: 10px;
 }
+
+#custom-notification_icon{
+  margin-top: 10px;
+}
+
 
 #custom-language_icon {
   margin-top: 10px;

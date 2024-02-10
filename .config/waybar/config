@@ -19,6 +19,7 @@
     "custom/tray_separator",
     "custom/mic_icon",
     "custom/audio_volume_icon",
+    "custom/notification_icon",
     "custom/language_icon",
     "hyprland/language", 
     "custom/power_button"
@@ -81,6 +82,10 @@
   },
   "custom/language_icon": {
     "format": ""
+  },
+  "custom/notification_icon": {
+    "format": "",
+    "on-click": "swaync-client --toggle-panel"
   },
   "hyprland/language": {
     "interval": 30,
