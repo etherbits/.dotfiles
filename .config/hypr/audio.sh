@@ -6,10 +6,10 @@ getVol(){
 
 showVol(){
   if [[ "$(pamixer --get-mute)" = "true" ]] then 
-    notify-send -t 500 -h int:value:"$(getVol)" -h string:x-canonical-private-synchronous:sys-notify "🔈   $(getVol)%"
+    notify-send -t 500 -h int:value:"$(getVol)" -h string:x-canonical-private-synchronous:sys-notify " (MUTED) audio volume $(getVol)%"
 
   else
-    notify-send -t 500 -h int:value:"$(getVol)" -h string:x-canonical-private-synchronous:sys-notify "🔊   $(getVol)%"
+    notify-send -t 500 -h int:value:"$(getVol)" -h string:x-canonical-private-synchronous:sys-notify " Audio volume $(getVol)%"
 
   fi
 
@@ -18,10 +18,10 @@ showVol(){
 
 showMic(){
   if [[ "$(pamixer --default-source --get-mute)" = "true" ]] then 
-    notify-send -t 500 -h string:x-canonical-private-synchronous:sys-notify "🎤 ❌"
+    notify-send -t 500 -h string:x-canonical-private-synchronous:sys-notify " Microphone on"
 
   else
-    notify-send -t 500 -h string:x-canonical-private-synchronous:sys-notify "🎤 ✔️"
+    notify-send -t 500 -h string:x-canonical-private-synchronous:sys-notify " Microphone off"
   fi
 
   pkill -SIGRTMIN+8 waybar # Update waybar
