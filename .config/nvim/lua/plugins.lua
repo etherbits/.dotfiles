@@ -72,11 +72,28 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {},
   },
   {
     "olivercederborg/poimandres.nvim",
     lazy = false,
     priority = 1000,
   },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
+  {
+    {
+      "baliestri/aura-theme",
+      lazy = false,
+      priority = 1000,
+      config = function(plugin)
+        vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+        vim.cmd([[colorscheme aura-dark]])
+      end
+    }
+  }
 }
