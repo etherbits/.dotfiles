@@ -1,5 +1,4 @@
 configuration {
-    font: "Roboto Mono 14";
     line-margin: 10;
 
     display-ssh:    "" ;
@@ -11,7 +10,7 @@ configuration {
 }
 
 
-@theme "~/.config/rofi/nord.rasi"
+@theme "~/.config/rofi/squared-nord.rasi"
 
 listview {
 	lines: 5;

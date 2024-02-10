@@ -1,0 +1,97 @@
+/*******************************************************************************
+ * ROFI SQUARED THEME USING THE NORD PALETTE 
+ * User                 : LR-Tech               
+ * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
+ *******************************************************************************/
+
+* {
+    font:   "Roboto Mono Medium 16";
+
+    bg0:     #2E344080;
+    bg1:     #3B425280;
+    fg0:     #D8DEE9;
+    fg1:     #11212f;
+
+    accent-color:     #88C0D080;
+    urgent-color:     #EBCB8B;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0;
+    padding:    0;
+    spacing:    0;
+}
+
+window {
+    location:   center;
+    width:      480;
+
+    background-color:   @bg0;
+}
+
+inputbar {
+    spacing:    8px; 
+    padding:    16px 20px;
+
+    background-color:   @bg1;
+}
+
+prompt, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+prompt {
+    text-color: @accent-color;
+}
+
+textbox {
+    padding:            8px;
+    background-color:   @bg1;
+}
+
+listview {
+    padding:    0;
+    lines:      8;
+    columns:    1;
+
+    fixed-height:   false;
+}
+
+element {
+    padding:    12px 16px;
+    spacing:    8px;
+}
+
+element normal normal {
+    text-color: @fg0;
+}
+
+element normal urgent {
+    text-color: @urgent-color;
+}
+
+element normal active {
+    text-color: @accent-color;
+}
+
+element selected {
+    text-color: @fg1;
+}
+
+element selected normal, element selected active {
+    background-color:   @accent-color;
+}
+
+element selected urgent {
+    background-color:   @urgent-color;
+}
+
+element-icon {
+    size:   0.8em;
+    padding: 0 8px 0 2px;
+}
+
+element-text {
+    text-color: inherit;
+}
