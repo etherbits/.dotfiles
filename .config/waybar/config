@@ -3,7 +3,6 @@
   "position": "left",
   "width": 56,
   "spacing": 4,
-  "output": ["HDMI-A-2"],
   "modules-left": [
     "custom/clock_icon",
     "clock",
