@@ -7,6 +7,11 @@ return {
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
   {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+  },
+  {
     "L3MON4D3/LuaSnip",
     version = "v2.*",
     build = "make install_jsregexp",
@@ -24,11 +29,6 @@ return {
   "nvim-telescope/telescope-ui-select.nvim",
   { "mfussenegger/nvim-dap",           dependencies = { "rcarriga/nvim-dap-ui" } },
   { "folke/neodev.nvim" },
-  {
-    "folke/trouble.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {},
-  },
   "numToStr/Navigator.nvim",
   "sindrets/diffview.nvim",
   "github/copilot.vim",
@@ -79,7 +79,6 @@ return {
 
       -- optional
       "nvim-treesitter/nvim-treesitter",
-      "rcarriga/nvim-notify",
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
