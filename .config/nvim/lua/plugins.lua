@@ -55,6 +55,7 @@ return {
     opts = {},
     lazy = false,
   },
+  'JoosepAlviste/nvim-ts-context-commentstring',
   {
     "smjonas/inc-rename.nvim",
     config = function()
@@ -73,7 +74,7 @@ return {
     build = ":TSUpdate html",
     dependencies = {
       "nvim-telescope/telescope.nvim",
-      "nvim-lua/plenary.nvim",   -- required by telescope
+      "nvim-lua/plenary.nvim", -- required by telescope
       "MunifTanjim/nui.nvim",
 
       -- optional

@@ -1,7 +1,7 @@
 {
   "$schema": "$XDG_CONFIG_HOME/swaync/configSchema.json",
   "positionX": "right",
-  "positionY": "bottom",
+  "positionY": "top",
   "layer": "top",
   "cssPriority": "application",
   "control-center-margin-top": 24,
