@@ -31,7 +31,7 @@ lsp_config.clangd.setup({
   capabilities = capabilities,
 })
 
-vim.keymap.set("n", "<leader>hi", vim.lsp.buf.hover, {})
+vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>hd", vim.diagnostic.open_float, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {})
@@ -40,4 +40,6 @@ vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, {})
 
 vim.keymap.set("n", "<leader>tsi", "<CMD>TSToolsAddMissingImports<CR>", {})
 vim.keymap.set("n", "<leader>tss", "<CMD>TSToolsOrganizeImports<CR>", {})
+vim.keymap.set("n", "<leader>tsr", "<CMD>TSToolsRemoveUnused<CR>", {})
 vim.keymap.set("n", "<leader>tsf", "<CMD>TSToolsFixAll<CR>", {})
+
