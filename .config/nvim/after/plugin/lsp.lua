@@ -31,6 +31,10 @@ lsp_config.clangd.setup({
   capabilities = capabilities,
 })
 
+lsp_config.cssls.setup({
+  capabilities = capabilities,
+})
+
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>hd", vim.diagnostic.open_float, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
