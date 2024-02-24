@@ -28,6 +28,11 @@ export XMODIFIERS='@im=fcitx'
 
 export PATH="$HOME/timer:$PATH"
 
+export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
+export ANDROID_HOME=/opt/android-sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+export NDK_HOME=/opt/android-ndk
+export JAVA_HOME=/opt/android-studio/jbr
 
 # custom commands
 pf(){

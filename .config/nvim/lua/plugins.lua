@@ -26,6 +26,10 @@ return {
     tag = "0.1.5",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
+  {
+    'f-person/git-blame.nvim',
+    opts = {}
+  },
   "nvim-telescope/telescope-ui-select.nvim",
   { "mfussenegger/nvim-dap",           dependencies = { "rcarriga/nvim-dap-ui" } },
   { "folke/neodev.nvim" },
