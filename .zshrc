@@ -142,3 +142,6 @@ esac
 
 # Created by `pipx` on 2023-11-13 16:46:52
 export PATH="$PATH:/home/etherbits/.local/bin"
+
+# Turso
+export PATH="/home/etherbits/.turso:$PATH"
