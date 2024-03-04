@@ -42,7 +42,7 @@ require("colorizer").setup({
 
     rgb_fn = true, -- CSS rgb() and rgba() functions.
     hsl_fn = true, -- CSS hsl() and hsla() functions.
-    css = true,    -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB.
+    css = true,    -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB...
     css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn.
     tailwind = "both",
 
@@ -64,6 +64,7 @@ function SetColors(theme)
   vim.cmd.colorscheme(theme)
 
   -- vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#363A4A" })
+  vim.api.nvim_set_hl(0, "LineNr", { fg = "#959DAB" })
 end
 
 SetColors()
