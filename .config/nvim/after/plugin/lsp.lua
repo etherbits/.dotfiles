@@ -2,9 +2,28 @@ require("mason").setup()
 
 require("mason-lspconfig").setup({
   ensure_installed = { "lua_ls", "tsserver" },
+  automatic_installation = false,
 })
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+require("mason-lspconfig").setup_handlers {
+  -- The first entry (without a key) will be the default handler
+  -- and will be called for each installed server that doesn't have
+  -- a dedicated handler.
+  function(server_name) -- default handler (optional)
+    require("lspconfig")[server_name].setup {
+      capabilities = capabilities,
+    }
+  end,
+
+  -- Next, you can provide a dedicated handler for specific servers.
+  -- For example, a handler override for the `rust_analyzer`:
+  -- ["rust_analyzer"] = function()
+  --   require("rust-tools").setup {}
+  -- end
+}
+
 
 local lsp_config = require("lspconfig")
 
@@ -17,26 +36,6 @@ lsp_config.lua_ls.setup({
       },
     },
   },
-})
-
-lsp_config.pyright.setup({
-  capabilities = capabilities,
-})
-
-lsp_config.tailwindcss.setup({
-  capabilities = capabilities,
-})
-
-lsp_config.clangd.setup({
-  capabilities = capabilities,
-})
-
-lsp_config.cssls.setup({
-  capabilities = capabilities,
-})
-
-lsp_config.rust_analyzer.setup({
-  capabilities = capabilities,
 })
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
