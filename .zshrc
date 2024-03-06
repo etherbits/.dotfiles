@@ -27,6 +27,7 @@ export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 
 export PATH="$HOME/timer:$PATH"
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 export ANDROID_HOME=/opt/android-sdk
