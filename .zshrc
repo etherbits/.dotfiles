@@ -28,6 +28,8 @@ export XMODIFIERS='@im=fcitx'
 
 export PATH="$HOME/timer:$PATH"
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export FLYCTL_INSTALL="/home/etherbits/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 export ANDROID_HOME=/opt/android-sdk
@@ -53,7 +55,11 @@ pf(){
   selected_name=$(basename "$selected" | tr . _)
 
   if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new -s $selected_name -c $selected
+    tmux new -s $selected_name -c $selected -d
+    if [[ $selected == ~/projects/* ]]; then
+      tmux splitw -h -l 75% -t $selected_name
+    fi
+    tmux attach -t $selected_name
   else
     tmux attach-session -t $selected_name
   fi
