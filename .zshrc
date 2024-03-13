@@ -55,9 +55,10 @@ pf(){
   selected_name=$(basename "$selected" | tr . _)
 
   if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new -s $selected_name -c $selected -d
+    tmux new -s $selected_name -c $selected -d -x "$(tput cols)" -y "$(tput lines)"
     if [[ $selected == ~/projects/* ]]; then
-      tmux splitw -h -l 75% -t $selected_name
+      tmux splitw -h -l '75%' -t $selected_name -c $selected
+      tmux send-keys -t $selected_name 'vim .' Enter
     fi
     tmux attach -t $selected_name
   else
