@@ -1,3 +1,9 @@
+showActivityIcon(){
+  if [[ -n "$(toki get)" ]]; then
+    echo "";
+  fi
+}
+
 showVolumeIcon() {
   if [[ "$(pamixer --get-mute)" = "true" ]]; then
     echo '';
@@ -49,4 +55,6 @@ elif [[ "$1" == "--get-mic-icon" ]]; then
   showMicIcon
 elif [[ "$1" == "--power-menu" ]]; then
   showPowerMenu
+elif [[ "$1" == "--get-activity-icon" ]]; then
+  showActivityIcon
 fi

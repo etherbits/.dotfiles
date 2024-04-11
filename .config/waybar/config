@@ -8,7 +8,9 @@
     "clock",
     "custom/calendar_icon",
     "clock#date",
-    "custom/week_day"
+    "custom/week_day",
+		"custom/activity_icon",
+		"custom/activity"
   ],
   "modules-center": [
     "hyprland/workspaces",
@@ -41,6 +43,17 @@
     "exec": "date '+%a'",
     "format": "{}"
   },
+  "custom/activity_icon": {
+    "exec": "zsh ~/.config/waybar/utils.sh --get-activity-icon",
+    "format": "",
+		"interval": 1
+  },
+	"custom/activity": {
+		"return-type": "json",
+		"exec": "toki get | jq --unbuffered --compact-output",
+		"format": "{}",
+		"interval": 1
+	},
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,

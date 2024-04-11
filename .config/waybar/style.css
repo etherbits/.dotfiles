@@ -27,6 +27,7 @@ window > box {
 /* icon colors */
 #custom-calendar_icon,
 #custom-clock_icon,
+#custom-activity_icon,
 #custom-audio_volume_icon,
 #custom-mic_icon,
 #custom-notification_icon,
@@ -42,6 +43,10 @@ window > box {
 /* spacing */
 #custom-calendar_icon,
 #tray{
+  margin-top: 16px;
+}
+
+#custom-activity_icon{
   margin-top: 16px;
 }
 

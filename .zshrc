@@ -27,6 +27,7 @@ export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 
 export PATH="$HOME/timer:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export FLYCTL_INSTALL="/home/etherbits/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
@@ -36,6 +37,9 @@ export ANDROID_HOME=/opt/android-sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export NDK_HOME=/opt/android-ndk
 export JAVA_HOME=/opt/android-studio/jbr
+
+export TMPDIR=$HOME/tmp
+
 
 # custom commands
 pf(){
