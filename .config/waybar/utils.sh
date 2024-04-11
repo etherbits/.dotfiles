@@ -4,6 +4,12 @@ showActivityIcon(){
   fi
 }
 
+showTimerIcon(){
+  if [[ -n "$(toki timer get)" ]]; then
+    echo "";
+  fi
+}
+
 showVolumeIcon() {
   if [[ "$(pamixer --get-mute)" = "true" ]]; then
     echo '';
@@ -57,4 +63,6 @@ elif [[ "$1" == "--power-menu" ]]; then
   showPowerMenu
 elif [[ "$1" == "--get-activity-icon" ]]; then
   showActivityIcon
+elif [[ "$1" == "--get-timer-icon" ]]; then
+  showTimerIcon
 fi

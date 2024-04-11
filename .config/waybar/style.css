@@ -1,25 +1,25 @@
 @import url("./colors.css");
 * {
-    border: none;
-    border-radius: 0;
-    font-family: Roboto Mono;
-    font-size: 14pt;
+  border: none;
+  border-radius: 0;
+  font-family: Roboto Mono;
+  font-size: 14pt;
 }
 
 window#waybar {
-    background: none;
+  background: none;
 }
 
 window > box {
-	  margin: 8px;
-    margin-right: 0px;
-    padding: 16px 8px;
-    background: rgba(36, 39, 58, 0.5);
-    color: white;
-    border-radius: 6px;
+  margin: 8px;
+  margin-right: 0px;
+  padding: 16px 8px;
+  background: rgba(36, 39, 58, 0.5);
+  color: white;
+  border-radius: 6px;
 }
 
-#custom-week_day{
+#custom-week_day {
   font-size: 12pt;
   font-family: Roboto Mono;
 }
@@ -32,33 +32,38 @@ window > box {
 #custom-mic_icon,
 #custom-notification_icon,
 #custom-language_icon,
+#custom-timer_icon,
 #custom-power_button {
-  color: rgba(200,216,255, 0.9);
+  color: rgba(200, 216, 255, 0.9);
 }
 
-#custom-tray_separator{
-  color: rgba(200,216,255, 0.6);
+#custom-tray_separator {
+  color: rgba(200, 216, 255, 0.6);
 }
 
 /* spacing */
 #custom-calendar_icon,
-#tray{
+#tray {
   margin-top: 16px;
 }
 
-#custom-activity_icon{
+#custom-activity_icon {
   margin-top: 16px;
 }
 
-#language{
+#custom-timer_icon {
+  margin-top: 16px;
+}
+
+#language {
   margin-top: -4px;
 }
 
-#custom-tray_separator{
+#custom-tray_separator {
   margin-top: 8px;
 }
 
-#custom-mic_icon{
+#custom-mic_icon {
   margin-top: 10;
 }
 
@@ -66,29 +71,27 @@ window > box {
   margin-top: 10px;
 }
 
-#custom-notification_icon{
+#custom-notification_icon {
   margin-top: 10px;
 }
-
 
 #custom-language_icon {
   margin-top: 10px;
 }
 
-#custom-power_button{
+#custom-power_button {
   margin-top: 16px;
 }
 
-
 #workspaces button {
-  color: rgba(200,216,255, 0.4);
+  color: rgba(200, 216, 255, 0.4);
 }
 
 #workspaces button:hover {
-  color: rgba(200,216,255, 0.85);
+  color: rgba(200, 216, 255, 0.85);
   background: none;
 }
 
 #workspaces button.active {
-  color: rgba(200,216,255, 11);
+  color: rgba(200, 216, 255, 11);
 }
