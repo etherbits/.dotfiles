@@ -17,8 +17,16 @@ setTimer(){
   toki timer start "$(rofi -dmenu -p 'Start timer' )";
 }
 
+stopTimer(){
+  toki timer stop
+}
+
 setActivity(){
   toki start "$(rofi -dmenu -p 'Start task' )";
+}
+
+stopActivity(){
+  toki stop
 }
 
 if [[ "$1" == "--screenshot-area" ]]; then
@@ -29,4 +37,11 @@ elif [[ "$1" == "--timer" ]]; then
   setTimer
 elif [[ "$1" == "--activity" ]]; then
   setActivity
+elif [[ "$1" == "--stop-timer" ]]; then
+  stopTimer
+elif [[ "$1" == "--stop-activity" ]]; then
+  stopActivity
+else
+  echo "Invalid argument"
+  exit 1
 fi
