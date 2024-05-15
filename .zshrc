@@ -82,6 +82,15 @@ qcp(){
   git push origin main
 }
 
+cdf(){
+  dir=$(find $1 -type d | fzf -q $2)
+  if [[ -n $dir ]]; then
+    cd $dir
+  else
+    echo "No directory found"
+  fi
+}
+
 ghme(){
   xdg-open https://github.com/etherbits
 }
@@ -95,6 +104,7 @@ qcpdots(){
 i(){
 	sudo pacman -S "$1"
 }
+
 
 unzipd(){
   if [[ $# != 1 ]]; then echo I need a single argument, the name of the archive to extract; return 1; fi

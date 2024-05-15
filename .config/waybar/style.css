@@ -27,7 +27,6 @@ window > box {
 /* icon colors */
 #custom-calendar_icon,
 #custom-clock_icon,
-#custom-activity_icon,
 #custom-audio_volume_icon,
 #custom-mic_icon,
 #custom-notification_icon,
@@ -35,6 +34,9 @@ window > box {
 #custom-timer_icon,
 #custom-power_button {
   color: rgba(200, 216, 255, 0.9);
+}
+#custom-activity_icon{
+  color: rgba(255, 216, 200, 0.9);
 }
 
 #custom-tray_separator {
