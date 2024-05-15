@@ -3,5 +3,5 @@ import = [
   "~/.config/alacritty/base.toml",
 
   # extension
-  "~/.config/alacritty/catppuccin-macchiato.toml",
+  # "~/.config/alacritty/catppuccin-macchiato.toml",
 ]

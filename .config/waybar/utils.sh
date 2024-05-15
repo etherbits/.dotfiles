@@ -1,66 +1,41 @@
 showActivityIcon(){
   if [[ -n "$(toki get)" ]]; then
-    echo "";
+    echo " ";
   fi
 }
 
 showTimerIcon(){
   if [[ -n "$(toki timer get)" ]]; then
-    echo "";
+    echo " ";
   fi
 }
 
 showVolumeIcon() {
   if [[ "$(pamixer --get-mute)" = "true" ]]; then
-    echo '';
+    echo "<span color=\"#aaa\"> </span>"
   else
-    if [[ "$(pamixer --get-volume)" -ge 100 ]]; then
-      echo '';
-    elif [[ "$(pamixer --get-volume)" -gt 30 ]]; then
-      echo '';
+    if [[ "$(pamixer --get-volume)" -ge 80 ]]; then
+      echo "<span color=\"#fff\"> </span>"
+    elif [[ "$(pamixer --get-volume)" -gt 5 ]]; then
+      echo "<span color=\"#fff\"> </span>"
     else
-      echo '';
+      echo "<span color=\"#fff\"> </span>"
     fi
   fi
 }
 
 showMicIcon(){
   if [[ "$(pamixer --default-source --get-mute)" = "true" ]] then 
-    echo ""
-
+    echo "<span color=\"#aaa\"> </span>"
   else
-    echo ""
+    echo "<span color=\"#fff\"> </span>"
   fi
-}
-
-showPowerMenu() {
-  option=$(echo "  Lock\n  Restart\n  Sleep\n  Hibernate\n  Shutdown" | rofi -dmenu -lines 0 -p "Power menu")
-  notify-send $option
-  case $option in
-    "  Lock")
-      swaylock
-      ;;
-    "  Restart")
-      systemctl reboot
-      ;;
-    "  Sleep")
-      systemctl suspend
-      ;;
-    "  Hibernate")
-      systemctl hibernate
-      ;;
-    "  Shutdown")
-      systemctl poweroff
-      ;;
-  esac
 }
 
 if [[ "$1" == "--get-vol-icon" ]]; then
   showVolumeIcon
 elif [[ "$1" == "--get-mic-icon" ]]; then
   showMicIcon
-elif [[ "$1" == "--power-menu" ]]; then
-  showPowerMenu
 elif [[ "$1" == "--get-activity-icon" ]]; then
   showActivityIcon
 elif [[ "$1" == "--get-timer-icon" ]]; then

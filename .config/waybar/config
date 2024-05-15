@@ -1,66 +1,41 @@
 {
   "layer": "top",
-  "position": "left",
-  "width": 56,
-  "spacing": 4,
+  "position": "top",
+  "height": 16,
   "modules-left": [
-    "custom/clock_icon",
-    "clock",
-    "custom/calendar_icon",
-    "clock#date",
-    "custom/week_day",
-		"custom/activity_icon",
-		"custom/activity",
-		"custom/timer_icon",
-		"custom/timer",
+		"clock",
+		"clock#date",
+    "custom/tray_separator",
+		"mpris",
   ],
   "modules-center": [
-    "hyprland/workspaces",
+		"hyprland/window"
   ],
   "modules-right": [
+    "hyprland/workspaces",
+    "custom/tray_separator",
     "tray",
     "custom/tray_separator",
-    "custom/mic_icon",
-    "custom/audio_volume_icon",
-    "custom/notification_icon",
-    "custom/language_icon",
     "hyprland/language", 
+    "custom/notification_icon",
+    "group/audio",
     "custom/power_button"
   ],
-  "custom/clock_icon": {
-    "format": ""
-  },
- "clock":{
-    "format": "{:%H\n%M\n%S}",
+  "clock":{
+    "format": " {:%H:%M:%S} ",
     "interval": 1
   },
-  "custom/calendar_icon": {
-    "format": "",
-  },
   "clock#date": {
-    "format": "{:%d\n%m\n%y}"
+    "format": " {:%d-%m-%y %a}"
   },
-  "custom/week_day": {
-    "exec": "date '+%a'",
-    "format": "{}"
-  },
-  "custom/activity_icon": {
-    "exec": "zsh ~/.config/waybar/utils.sh --get-activity-icon",
-		"interval": 1
-  },
-	"custom/activity": {
-		"return-type": "json",
-		"exec": "toki get | jq --unbuffered --compact-output",
-		"interval": 1
-	},
-  "custom/timer_icon": {
-    "exec": "zsh ~/.config/waybar/utils.sh --get-timer-icon",
-		"interval": 1
-  },
-	"custom/timer": {
-		"return-type": "json",
-		"exec": "toki timer get | jq --unbuffered --compact-output",
-		"interval": 1
+	"hyprland/window": {
+			"format": "{title}",
+			"rewrite": {
+					"(.*) — Mozilla Firefox": "  $1",
+					"(.*) - zsh": "> [$1]"
+			},
+			"max-length": 30,
+			"separate-outputs": true
 	},
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -80,14 +55,23 @@
       "6": [],
       "7": [],
       "8": [],
+      "9": [],
     },
   },
   "tray": {
     "spacing": 8
   },
   "custom/tray_separator": {
-    "format": ""
+    "format": "|"
   },
+	"group/audio": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/mic_icon",
+			"custom/audio_volume_icon",
+			"pulseaudio/slider"
+		]
+	},
   "custom/mic_icon": { 
     "exec": "zsh ~/.config/waybar/utils.sh --get-mic-icon",
     "on-click": "zsh ~/.config/hypr/audio.sh --toggle-mic-mute",
@@ -97,26 +81,43 @@
   },
   "custom/audio_volume_icon": {
     "exec": "zsh ~/.config/waybar/utils.sh --get-vol-icon",
+		"on-click": "zsh ~/.config/hypr/audio.sh --toggle-audio-mute",
     "format": "{}",
     "interval": "once", // this is needed for sig
     "signal": 8         
   },
-  "custom/language_icon": {
-    "format": "",
-    "on-click": "hyprctl switchxkblayout keychron-keychron-k6-pro next"
-  },
+	"pulseaudio/slider": {
+			"min": 0,
+			"max": 100,
+			"orientation": "horizontal"
+	},
   "custom/notification_icon": {
-    "format": "",
+    "format": " ",
     "on-click": "swaync-client --toggle-panel"
   },
   "hyprland/language": {
     "interval": 30,
+		"on-click": "hyprctl switchxkblayout keychron-keychron-k6-pro next",
     "format": "{short}",
     "keyboard-name": "keychron-keychron-k6-pro",
     "signal": 8
   },
   "custom/power_button":{
-    "format":"",
-    "on-click": "zsh ~/.config/waybar/utils.sh --power-menu"
-  }
+    "format":" ",
+    "on-click": "wlogout"
+  },
+	"mpris": {
+		"interval": 1,
+		"format": "{player_icon} {dynamic}",
+		"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+		"player-icons": {
+			"default": "▶",
+			"mpv": "🎵",
+			"spotify": ""
+		},
+		"status-icons": {
+			"paused": "⏸"
+		},
+		// "ignored-players": ["firefox"]
+	},
 }

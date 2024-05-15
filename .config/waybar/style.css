@@ -1,9 +1,8 @@
-@import url("./colors.css");
 * {
   border: none;
   border-radius: 0;
-  font-family: Roboto Mono;
-  font-size: 14pt;
+  font-family: "Monaspace Neon";
+  font-size: 13pt;
 }
 
 window#waybar {
@@ -11,78 +10,37 @@ window#waybar {
 }
 
 window > box {
-  margin: 8px;
-  margin-right: 0px;
-  padding: 16px 8px;
-  background: rgba(36, 39, 58, 0.5);
+  margin: 12px;
+  padding: 6px 16px;
+  background: rgba(36, 36, 36, 0.5);
   color: white;
   border-radius: 6px;
 }
 
-#custom-week_day {
-  font-size: 12pt;
-  font-family: Roboto Mono;
+#clock {
+  margin-right: 0;
 }
 
-/* icon colors */
-#custom-calendar_icon,
-#custom-clock_icon,
-#custom-audio_volume_icon,
-#custom-mic_icon,
-#custom-notification_icon,
-#custom-language_icon,
-#custom-timer_icon,
-#custom-power_button {
-  color: rgba(200, 216, 255, 0.9);
+#custom-notification_icon
+{
+  margin:0 12px;
 }
+
+#custom-power_button{
+  margin-left: 16px;
+}
+
+#custom-mic_icon{
+  margin-right: 8px;
+}
+
 #custom-activity_icon{
   color: rgba(255, 216, 200, 0.9);
 }
 
 #custom-tray_separator {
   color: rgba(200, 216, 255, 0.6);
-}
-
-/* spacing */
-#custom-calendar_icon,
-#tray {
-  margin-top: 16px;
-}
-
-#custom-activity_icon {
-  margin-top: 16px;
-}
-
-#custom-timer_icon {
-  margin-top: 16px;
-}
-
-#language {
-  margin-top: -4px;
-}
-
-#custom-tray_separator {
-  margin-top: 8px;
-}
-
-#custom-mic_icon {
-  margin-top: 10;
-}
-
-#custom-audio_volume_icon {
-  margin-top: 10px;
-}
-
-#custom-notification_icon {
-  margin-top: 10px;
-}
-
-#custom-language_icon {
-  margin-top: 10px;
-}
-
-#custom-power_button {
-  margin-top: 16px;
+  margin: 0 12px;
 }
 
 #workspaces button {
@@ -96,4 +54,26 @@ window > box {
 
 #workspaces button.active {
   color: rgba(200, 216, 255, 11);
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-width: 60px;
+    min-height: 4px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 5px;
+    background-color: white;
 }
