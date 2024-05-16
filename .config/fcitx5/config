@@ -34,6 +34,8 @@ TogglePreedit=
 [Behavior]
 # Active By Default
 ActiveByDefault=True
+# Reset state on Focus In
+resetStateWhenFocusIn=No
 # Share Input State
 ShareInputState=All
 # Show preedit in application
