@@ -4,4 +4,6 @@ import = [
 
   # extension
   # "~/.config/alacritty/catppuccin-macchiato.toml",
+
+  "~/.config/alacritty/kanagawa_dragon.toml"
 ]
