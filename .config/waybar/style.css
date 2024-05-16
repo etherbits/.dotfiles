@@ -12,8 +12,8 @@ window#waybar {
 window > box {
   margin: 12px;
   padding: 6px 16px;
-  background: rgba(36, 36, 36, 0.5);
-  color: white;
+  background: rgba(24, 22, 22, 0.5);
+  color: rgba(237, 241, 247, 1);
   border-radius: 6px;
 }
 
@@ -27,7 +27,7 @@ window > box {
 }
 
 #custom-power_button{
-  margin-left: 16px;
+  margin-left: 12px;
 }
 
 #custom-mic_icon{
@@ -39,21 +39,21 @@ window > box {
 }
 
 #custom-tray_separator {
-  color: rgba(200, 216, 255, 0.6);
+  color: rgba(197, 201, 197, 0.5);
   margin: 0 12px;
 }
 
 #workspaces button {
-  color: rgba(200, 216, 255, 0.4);
+  color: rgba(197, 201, 197, 0.3);
 }
 
 #workspaces button:hover {
-  color: rgba(200, 216, 255, 0.85);
+  color: rgba(197, 201, 197, 0.8);
   background: none;
 }
 
 #workspaces button.active {
-  color: rgba(200, 216, 255, 11);
+  color: rgba(197, 201, 197, 1);
 }
 
 #pulseaudio-slider slider {
@@ -66,7 +66,7 @@ window > box {
 }
 
 #pulseaudio-slider trough {
-    min-width: 60px;
+    min-width: 80px;
     min-height: 4px;
     border-radius: 5px;
     background-color: black;

@@ -22,16 +22,16 @@
     "custom/power_button"
   ],
   "clock":{
-    "format": " {:%H:%M:%S} ",
+    "format": "<span color=\"#c5c9c5\"> </span>{:%H:%M:%S} ",
     "interval": 1
   },
   "clock#date": {
-    "format": " {:%d-%m-%y %a}"
+    "format": "<span color=\"#c5c9c5\"> </span>{:%d-%m-%y %a}"
   },
 	"hyprland/window": {
 			"format": "{title}",
 			"rewrite": {
-					"(.*) — Mozilla Firefox": "  $1",
+					"(.*) — Mozilla Firefox": "<span color=\"#c5c9c5\"> </span>  $1",
 					"(.*) - zsh": "> [$1]"
 			},
 			"max-length": 30,
@@ -92,7 +92,7 @@
 			"orientation": "horizontal"
 	},
   "custom/notification_icon": {
-    "format": " ",
+    "format": "<span color=\"#c5c9c5\"> </span>",
     "on-click": "swaync-client --toggle-panel"
   },
   "hyprland/language": {
@@ -103,21 +103,23 @@
     "signal": 8
   },
   "custom/power_button":{
-    "format":" ",
+    "format":"<span color=\"#c5c9c5\"> </span>",
     "on-click": "wlogout"
   },
 	"mpris": {
-		"interval": 0.1,
+		"interval": 1,
 		"format": "{player_icon} {dynamic}",
 		"format-paused": "{status_icon} <i>{dynamic}</i>",
+		"max-length": 48,
 		"player-icons": {
-			"default": "▶",
-			"mpv": "🎵",
-			"spotify": ""
+			"default": "<span color=\"#c5c9c5\">▶ </span>",
+			"mpv": "<span color=\"#c5c9c5\">🎵</span>",
+			"spotify": "<span color=\"#c5c9c5\"> </span>",
+			"firefox": "<span color=\"#c5c9c5\"> </span>"
 		},
 		"status-icons": {
-			"paused": "⏸"
+			"paused": "<span color=\"#c5c9c5\">⏸ </span>"
 		},
-		"ignored-players": ["firefox"]
+		// "ignored-players": ["firefox"]
 	},
 }
