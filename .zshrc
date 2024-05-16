@@ -16,7 +16,6 @@ compinit
 alias dotgit='/usr/bin/git --git-dir=/home/etherbits/.dotfiles/ --work-tree=/home/etherbits'
 
 alias vim=nvim
-alias wlogout='wlogout -b 5 -s -T 500 -B 500'
 
 alias paru="paru --limit 5"
 
