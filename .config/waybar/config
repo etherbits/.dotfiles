@@ -31,7 +31,7 @@
 	"hyprland/window": {
 			"format": "{title}",
 			"rewrite": {
-					"(.*) — Mozilla Firefox": "<span color=\"#c5c9c5\"> </span>  $1",
+					"(.*) — Mozilla Firefox": "<span color=\"#c5c9c5\"> </span>  $1",
 					"(.*) - zsh": "> [$1]"
 			},
 			"max-length": 30,
