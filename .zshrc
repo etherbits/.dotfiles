@@ -92,7 +92,7 @@ cdf(){
 }
 
 ghme(){
-  xdg-open https://github.com/etherbits
+  xdg-open https://github.com/etherbits &!
 }
 
 qcpdots(){

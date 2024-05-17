@@ -104,7 +104,7 @@
   },
   "custom/power_button":{
     "format":"<span color=\"#c5c9c5\"> </span>",
-    "on-click": "wlogout"
+    "on-click": "wlogout -b 5 -s -T 500 -B 500 --protocol layer-shell"
   },
 	"mpris": {
 		"interval": 1,
@@ -114,7 +114,7 @@
 		"player-icons": {
 			"default": "<span color=\"#c5c9c5\">▶ </span>",
 			"mpv": "<span color=\"#c5c9c5\">🎵</span>",
-			"spotify": "<span color=\"#c5c9c5\"> </span>",
+			"spotify": "<span color=\"#a5efa5\"> </span>",
 			"firefox": "<span color=\"#c5c9c5\"> </span>"
 		},
 		"status-icons": {
