@@ -32,6 +32,7 @@
 			"format": "{title}",
 			"rewrite": {
 					"(.*) — Mozilla Firefox": "<span color=\"#c5c9c5\"> </span>  $1",
+					"(.*) — Google Chrome": "<span color=\"#c5c9c5\"> </span>  $1",
 					"(.*) - zsh": "> [$1]"
 			},
 			"max-length": 30,
@@ -115,7 +116,8 @@
 			"default": "<span color=\"#c5c9c5\">▶ </span>",
 			"mpv": "<span color=\"#c5c9c5\">🎵</span>",
 			"spotify": "<span color=\"#a5efa5\"> </span>",
-			"firefox": "<span color=\"#c5c9c5\"> </span>"
+			"firefox": "<span color=\"#c5c9c5\"> </span>",
+			"google-chrome-stable": "<span color=\"#c5c9c5\"> </span>"
 		},
 		"status-icons": {
 			"paused": "<span color=\"#c5c9c5\">⏸ </span>"
