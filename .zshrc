@@ -39,7 +39,9 @@ export NDK_HOME=/opt/android-ndk
 export JAVA_HOME=/opt/android-studio/jbr
 
 export TMPDIR=$HOME/tmp
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # custom commands
 pf(){
@@ -79,7 +81,8 @@ qc(){
 qcp(){
   git add .
   git commit -m "$1"
-  git push origin main
+  branch=$(git branch --show-current)
+  git push origin $branch
 }
 
 cdf(){
